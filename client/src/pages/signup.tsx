@@ -66,7 +66,7 @@ const Signup: React.FC = () => {
       .required("Confirm Password is required"),
   });
 
-  const mutation = useMutation<UserState, Error, SignupFormValues>({
+  const mutation = useMutation({
     mutationFn: async (formData: SignupFormValues) => {
       const response = await axios.post("http://localhost:8004/app/signup", formData);
       return response.data;

@@ -15,9 +15,11 @@ import Preferences from "./pages/preferences";
 import InviteFriend from "./pages/inviteFriend";
 import Friends from "./pages/friends";
 import CreateWaves from "./pages/createWaves";
+import Dashboard from "./pages/dashboard";
 
 const queryClient = new QueryClient();
 
+console.log("////",store.getState());
 const router = createBrowserRouter([
   {
     path:'/adminSignup',
@@ -51,7 +53,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "dashboard",
-        element: <div>Dashboard Content</div>,
+        element: <Dashboard/>,
       },
       {
         path: "profile/:userId",

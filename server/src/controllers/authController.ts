@@ -332,7 +332,8 @@ export const fetchFriends=async(req:any,res:any)=>{
 //to create waves for the user
 
 export const createWaves=async(req:any,res:any)=>{
-    const userId=req.params.id;
+  console.log("hello")
+    const userId=req.params.userId;
     const{name,message}=req.body;
     const photoUrl=req.file?.path;
 
@@ -343,5 +344,19 @@ export const createWaves=async(req:any,res:any)=>{
   catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Error creating wave' });
+  }
+}
+
+//to get all the waves on the dashboard
+
+export const getWaves=async(req:any,res:any)=>{
+  
+  try{
+     const waves=await Waves.findAll();
+     res.status(200).json({message:'request fetch success',waves})
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error fetching waves' });
   }
 }
