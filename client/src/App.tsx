@@ -16,6 +16,7 @@ import InviteFriend from "./pages/inviteFriend";
 import Friends from "./pages/friends";
 import CreateWaves from "./pages/createWaves";
 import Dashboard from "./pages/dashboard";
+import ChangePassword from "./pages/changePassword";
 
 const queryClient = new QueryClient();
 
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
      {
     path: "/createWaves",
     element: <CreateWaves />,
+  },
+   {
+    path: "/changePassword",
+    element: <ChangePassword/>,
   },
     ],
   },

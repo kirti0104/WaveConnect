@@ -99,7 +99,7 @@ const toggleCommunication = (type: keyof CommunicationState): void => {
 };
   const dispatch = useDispatch();
 
-    const mutation = useMutation<Preferences, Error, Preferences>({
+    const mutation = useMutation({
     mutationFn: async (formData: Preferences) => {
       const response = await axios.post("http://localhost:8004/app/addPreferences", formData);
       return response.data;

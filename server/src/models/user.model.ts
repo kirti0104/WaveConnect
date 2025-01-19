@@ -22,6 +22,7 @@ class User extends Model {
   public social!: string;
   public kids!: string;
   public status!: string;
+  public userProfile!:string
   public isDeleted!: boolean;
   public createdAt!: Date;
   public updatedAt!: Date;
@@ -103,6 +104,10 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: "active",
+    },
+      userProfile: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     isDeleted: {
       type: DataTypes.BOOLEAN,

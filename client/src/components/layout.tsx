@@ -50,8 +50,10 @@ const Layout: React.FC = () => {
             
          </li>
             <li className="cursor-pointer hover:bg-[#BEA16E] p-2 rounded flex items-center gap-2">
+              <Link to="/changePassword" className="flex items-center gap-2">
             <img src="/linechart.png" className="h-8 w-8" alt="linechart Icon" />
             <span>Change Password</span>
+            </Link>
          </li>
         </ul>
          <div className="logoutButton text-white absolute bottom-14 ms-16 flex gap-4">

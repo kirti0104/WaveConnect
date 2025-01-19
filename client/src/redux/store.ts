@@ -4,7 +4,8 @@ import tabReducer from './tabSlice';
 import adminReducer from './adminSlice';
 import preferencesReducer from './preferencesSlice'; // Import preferences slice
 import  inviteFriendReducer  from './inviteFriendsSlice';
-import createWaveSlice from './wavesSlice'
+import createWaveSlice from './wavesSlice';
+import changePasswordReducer from './changePasswordSlice';
 
 
 
@@ -16,6 +17,7 @@ const store = configureStore({
     preferences: preferencesReducer, 
     inviteFriend: inviteFriendReducer,
     createWaves: createWaveSlice,
+    changePassword: changePasswordReducer,
   },
 });
 
